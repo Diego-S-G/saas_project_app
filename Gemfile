@@ -33,6 +33,7 @@ gem 'hirb', '~> 0.7.3'
 gem 'devise'
 gem 'milia'
 
+gem "font-awesome-rails"
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 

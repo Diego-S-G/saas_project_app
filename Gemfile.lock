@@ -100,6 +100,8 @@ GEM
     erubi (1.13.0)
     execjs (2.10.0)
     ffi (1.17.0)
+    font-awesome-rails (4.7.0.9)
+      railties (>= 3.2, < 9.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     hirb (0.7.3)
@@ -269,6 +271,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   devise-bootstrap-views
+  font-awesome-rails
   hirb (~> 0.7.3)
   jbuilder (~> 2.5)
   jquery-rails
