@@ -30,6 +30,9 @@ gem 'hirb', '~> 0.7.3'
 gem 'devise'
 gem 'milia'
 
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
