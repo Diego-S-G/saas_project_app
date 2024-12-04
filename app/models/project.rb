@@ -10,12 +10,12 @@ class Project < ApplicationRecord
     end
   end
 
-  def self.by_user_plan_and_tenant(tenant_id) # placeholder por enquanto
+  def self.by_plan_and_tenant(tenant_id) # placeholder por enquanto
     tenant = Tenant.find(tenant_id)
     if tenant.plan == 'premium'
       tenant.projects
     else
-      tenants.projects.order(:id).limit(1)
+      tenant.projects.order(:id).limit(1)
     end
   end
 end
