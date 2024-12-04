@@ -11,7 +11,7 @@
     <% artifacts.each do |artifact| %>
       <tr>
         <td><%= link_to artifact.name, artifact_path(artifact), class: 'main-link' %></td>
-        <td>{ Here it should have a link to the artifact using s3 bucket so that you can see your artifact }</td>
+        <td>{ Here it should have a link to the artifact using s3 bucket so that you can see your artifact }</td> <!--aqui teria o s3_link Tenant.current_tenant_id, artifact.key em um código ruby-->
         <td>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       artifact_path(artifact),
