@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/rails/activerecord-session_store.git
+  revision: 45ad879adc44fb96d2df87ef349b042b49705bfa
+  branch: rm-drop-unsupported-rails-ruby
+  specs:
+    activerecord-session_store (1.1.3)
+      actionpack (>= 5.2)
+      activerecord (>= 5.2)
+      multi_json (~> 1.11, >= 1.11.2)
+      rack (>= 2.0.0, < 3)
+      railties (>= 5.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,9 +60,12 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     base64 (0.2.0)
+    bcrypt (3.1.20)
     bindex (0.8.1)
     bootsnap (1.3.2)
       msgpack (~> 1.0)
+    bootstrap-datepicker-rails (1.10.0.1)
+      railties (>= 3.0)
     builder (3.3.0)
     byebug (11.1.3)
     capybara (3.11.1)
@@ -73,12 +88,22 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commonjs (0.2.7)
     concurrent-ruby (1.3.4)
     crass (1.0.6)
+    devise (4.9.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
+    devise-bootstrap-views (1.1.0)
     digest (3.1.1)
     erubi (1.13.0)
     execjs (2.10.0)
     ffi (1.17.0)
+    font-awesome-rails (4.7.0.9)
+      railties (>= 3.2, < 9.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     hirb (0.7.3)
@@ -89,6 +114,16 @@ GEM
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jquery-rails (4.6.0)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    less-rails (4.0.0)
+      actionpack (>= 4)
+      less (~> 2.6.0)
+      sprockets (>= 2)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -103,9 +138,13 @@ GEM
       net-smtp
     marcel (1.0.4)
     method_source (1.1.0)
+    milia (1.3.1)
+      devise (~> 4.2)
+      rails (~> 5.0)
     mini_mime (1.1.2)
     minitest (5.15.0)
     msgpack (1.7.5)
+    multi_json (1.15.0)
     net-imap (0.2.2)
       digest
       net-protocol
@@ -122,6 +161,7 @@ GEM
     nio4r (2.7.3)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     public_suffix (4.0.7)
     puma (3.12.6)
     racc (1.8.1)
@@ -158,6 +198,9 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     regexp_parser (1.8.2)
+    responders (3.1.1)
+      actionpack (>= 5.2)
+      railties (>= 5.2)
     ruby_dep (1.5.0)
     rubyzip (1.3.0)
     sass (3.7.4)
@@ -196,10 +239,17 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
+    twitter-bootstrap-rails (5.0.0)
+      actionpack (>= 5.0, < 8.0)
+      execjs (~> 2.7)
+      less-rails (>= 3.0, < 5.0)
+      railties (>= 5.0, < 8.0)
     tzinfo (1.2.11)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -215,14 +265,21 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activerecord-session_store!
   bootsnap (~> 1.3.2)
+  bootstrap-datepicker-rails
   byebug
   capybara (~> 3.11.1)
   chromedriver-helper (~> 2.0.1)
   coffee-rails (~> 4.2)
+  devise
+  devise-bootstrap-views
+  font-awesome-rails
   hirb (~> 0.7.3)
   jbuilder (~> 2.5)
+  jquery-rails
   listen (>= 3.0.5, < 3.2)
+  milia
   puma (~> 3.11)
   rails (~> 5.2.1)
   sass-rails (~> 5.0)
@@ -231,6 +288,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.3.6)
   turbolinks (~> 5)
+  twitter-bootstrap-rails
   tzinfo-data
   uglifier (~> 4.1.20)
   web-console (>= 3.3.0)
