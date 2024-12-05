@@ -17,3 +17,15 @@
 //= require twitter/bootstrap
 //= require bootstrap-datepicker
 //= require_tree .
+
+$(document).on('turbolinks:load', function() {
+    $('.datepicker').datepicker({
+        autoclose: true, // Fecha automaticamente após selecionar a data
+        format: 'yyyy/mm/dd', // Formato de data
+        todayHighlight: true // Destacar a data atual
+    });
+});
+
+$(document).on('turbolinks:before-cache', function() {
+    $('.datepicker').datepicker('destroy');
+});
