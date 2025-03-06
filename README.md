@@ -1,7 +1,7 @@
 # Project Management App
 <br/>
 
-Este é um dos projetos que fiz acompanhando o [curso do Mashrur Hossain na Udemy](https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course) na minha trilha de aprendizado de Ruby e Rails.
+Este é um dos projetos que fiz acompanhando o [curso do Mashrur Hossain na Udemy](https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course), na minha trilha de aprendizado de Ruby e Rails.
 <br/>
 
 O Project Management App é uma aplicação onde os usuários podem criar e gerenciar seus projetos de acordo com seu plano, adicionando artefatos e usuários a eles. Ele usa Milia para multi-tenancy, então cada projeto pertence à uma organização.
